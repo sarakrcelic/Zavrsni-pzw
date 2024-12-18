@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji boravišta</title>
+</head>
+<body>
+    {% block content %}
+    <h2>Detalji boravišta</h2>
+    Naziv mjesta: {{ object.boraviste_naziv_mjesta }} <br>
+    Poštanski broj: {{ object.boraviste_postanski_broj }} <br>
+    <a href="{% url 'main:boraviste_list' %}">Natrag na popis boravišta</a>
+    {% endblock %}
+</body>
+</html>
