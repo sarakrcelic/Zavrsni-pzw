@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Izbriši termin</title>
+</head>
+<body>
+    <h1>Izbriši termin</h1>
+    <p>Jeste li sigurni da želite obrisati termin?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Potvrdi brisanje">
+    </form>
+</body>
+</html>

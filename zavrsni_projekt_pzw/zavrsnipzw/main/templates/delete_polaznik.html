@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Izbrisi polaznika</title>
+</head>
+<body>
+    <h1>Izbrisi polaznika</h1>
+    <p>Jeste li sigurni da zelite obrisati polaznika?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm Delete">
+    </form>
+</body>
+</html>

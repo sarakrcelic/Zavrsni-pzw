@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Izbrisi raspored</title>
+</head>
+<body>
+    <h1>Izbrisi raspored</h1>
+    <p>Jeste li sigurni da zelite obrisati raspored "{{ raspored.termin }}" za "{{ raspored.tecaj }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm Delete">
+    </form>
+</body>
+</html>

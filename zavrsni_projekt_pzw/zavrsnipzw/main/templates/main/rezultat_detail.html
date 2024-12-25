@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji rezultata</title>
+</head>
+<body>
+    {% block content %}
+    <h2>Detalji rezultata</h2>
+    Polaznik: {{ rezultat.polaznik }}<br>
+    Ocjena: {{ rezultat.ocjena }} <br>
+    Polozen tecaj: {{ rezultat.polozen_tecaj }} <br>
+    Certifikat: {{ rezultat.certifikat }}
+    <a href="{% url 'main:rezultat_list' %}">Natrag na popis rezultata</a>
+    {% endblock %}
+</body>
+</html>

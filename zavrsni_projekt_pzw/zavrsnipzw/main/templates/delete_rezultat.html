@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Izbrisi rezultat</title>
+</head>
+<body>
+    <h1>Izbrisi rezultat</h1>
+    <p>Jeste li sigurni da zelite obrisati rezultat "{{ object.rezultat }}" za "{{ object.polaznik }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Potvrdi brisanje">
+    </form>
+</body>
+</html>

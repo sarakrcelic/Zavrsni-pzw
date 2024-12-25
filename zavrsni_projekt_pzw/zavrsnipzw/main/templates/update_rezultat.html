@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Azuriraj rezultat</title>
+</head>
+<body>
+    <h1>Azuriraj rezultat</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Azuriraj rezultat</button>
+    </form>
+</body>
+</html>

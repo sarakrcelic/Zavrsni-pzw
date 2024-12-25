@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dodaj raspored</title>
+</head>
+<body>
+    <h1>Dodaj novi raspored</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Dodaj raspored</button>
+    </form>
+</body>
+</html>
