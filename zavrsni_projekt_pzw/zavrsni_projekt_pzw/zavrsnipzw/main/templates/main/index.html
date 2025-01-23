@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <h1>Programiranje za web</h1>
+
+    {% if user.is_authenticated %}
+    <p>Vaš username: {{ user.username }}</p>
+    {% else %}
+    <p>Niste prijavljeni. Prijavite se.</p>
+    {% endif %}
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecaj</title>
+</head>
+<body>
+    {% block content %}
+    <h2>Tecaj</h2>
+    <form method="GET" action="">
+        <input type="text" name="q" placeholder="Search by name..." value="{{ request.GET.q }}">
+        <button type="submit">Pretrazi</button>
+        <br>
+        <br>
+        <a href="{% url 'main:addtec' %}">Dodaj tečaj</a>
+    <ul>
+        {% for tecaj in object_list %}
+            <li>
+                Naziv: {{ tecaj.tecaj_naziv }}<br>
+                Nositelj: {{ tecaj.tecaj_nositelj }} <br>
+                <a href="{% url 'main:tecaj_detail' tecaj.id %}">
+                    Detalji </a>
+            </li>
+            <a href="{% url 'main:updatetec' tecaj.pk %}">Azuriraj</a>
+            <a href="{% url 'main:deletetec' tecaj.pk %}">Obrisi</a>
+        {% endfor %}
+    </ul>
+{% endblock %}
+</body>
+</html>

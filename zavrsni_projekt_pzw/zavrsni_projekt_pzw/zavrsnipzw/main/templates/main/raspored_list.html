@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspored</title>
+</head>
+<body>
+    {% block content %}
+    <h2>Raspored</h2>
+    <form method="GET" action="">
+        <input type="text" name="q" placeholder="Search by time..." value="{{ request.GET.q }}">
+        <button type="submit">Pretrazi</button> <br>
+        <br>
+        <a href="{% url 'main:addras' %}">Dodaj raspored</a>
+    </form>
+    <ul>
+        {% for raspored in object_list %}
+            <li>
+                Vrijeme: {{ raspored.raspored_vrijeme.vrijeme }}<br>  
+                Tečaj: {{ raspored.raspored_tecaj.tecaj_naziv }}<br>  
+                <a href="{% url 'main:raspored_detail' raspored.pk %}">
+                    Detalji
+                </a>
+            </li>
+            <a href="{% url 'main:updateras' raspored.pk %}">Azuriraj</a>
+            <a href="{% url 'main:deleteras' raspored.pk %}">Obrisi</a>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>
